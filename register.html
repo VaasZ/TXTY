@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="register">
+	<head>
+		<meta charset="UTF-8">
+		<title>欢迎加入天选运动</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/register.css"/>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-cookies.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="register-box" ng-controller="registerCtrl">
+		<div id="register">
+			<div id="register-content" class="clear">
+			<img src="img/title.png"/>
+			<form action="" id="form">
+				<input style="margin-top: 50px;" type="text" name="username" id="username" placeholder="用户名:包含字母和数字,不得少于4位" ng-blur="checkUserName()" ng-model="username"/><span ng-if="!result1">*请输入正确的用户名</span><br />
+				<input type="password" name="userpwd" id="userpwd" placeholder="密码:6~16位,包含字母和数字" ng-model="userpwd"  ng-blur="checkUserPwd()"/><span ng-if="!result2">*输入格式有误</span><br />
+				<input type="password" id="userpwd-r" placeholder="重复密码" ng-model="userpwdR"/><span ng-if="!(userpwd===userpwdR)">*重复密码有误</span><br />
+				<input type="email" name="email" id="email" placeholder="邮箱" ng-model="email"  ng-blur="checkUserEmail()"/><span ng-if="!result3">*输入格式有误</span><br />
+				<input type="text" name="phone" id="phone" placeholder="手机号" ng-model="phone" ng-blur="checkUserPhone()"/><span ng-if="!result4">*请输入正确的手机号</span><br />
+				<div id="submit-btn" ng-click="submitUser()">注 册</div>
+			</form>
+			</div>
+		</div>
+		</div>
+	</body>
+</html>
+<script src="js/register.js" type="text/javascript" charset="utf-8"></script>

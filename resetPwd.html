@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="resetPwd">
+	<head>
+		<meta charset="UTF-8">
+		<title>修改密码</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/resetPwd.css"/>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-cookies.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="resetPwd" ng-controller="resetPwdCtrl">
+			<div id="resetPwd-wrap">
+				<div id="resetPwd-box" class="clear">
+					<img src="img/title.png"/>
+					<form action="" method="post" id="form">
+						<input type="password" name="oldpwd" id="oldpwd" placeholder="请输入旧密码" ng-model="oldpwd" /><span ng-if="!result1">*请输入正确的旧密码</span><br />
+						<input type="password" name="newpwd" id="newpwd" placeholder="请输入新密码:6~16位包含数字和字母" ng-blur="checkNewPwd()" ng-model="newpwd"/><span ng-if="!result2">*请输入正确的新密码</span><br />
+						<input type="password"  id="newpwdr" placeholder="重复新密码"  ng-model="newpwdr"/><span ng-if="!(newpwd === newpwdr)">*重复新密码</span><br />
+						<div id="resetPwd-btn" ng-click="resetPwdSubmit()">修改</div><br />
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/resetPwd.js" type="text/javascript" charset="utf-8"></script>

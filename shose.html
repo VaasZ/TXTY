@@ -1,0 +1,11 @@
+<div id="skate" class="container">
+	<div class="row">
+		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 skate-box" ng-repeat="k in shoseArray" ng-click="goodsClick()">
+			<div class="skate-img" ng-src="{{k.goods_name}}">
+				<img ng-src="{{(k.src.split(','))[0]}}"/>
+			</div>
+			<p ng-bind="k.name"></p>
+			<span ng-bind="k.price | currency:'¥'"></span>
+		</div>
+	</div>
+</div>

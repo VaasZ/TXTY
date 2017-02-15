@@ -1,0 +1,44 @@
+.clear:after{content: "";display: block;clear: both;}
+#home{width: 100%;}
+#userinfo{display: inline-block;cursor: pointer;margin-right: 62px;}
+.userinfo-btn{background: black;color: white;height:20px;line-height: 20px;font-size: 13px;}
+#home-wrap{width: 100%;max-width: 1200px;margin: 0 auto;}
+#home-title{width: 100%;}
+#home-title-top{width: 100%;height:30px;background: black;color: white;text-align: right;line-height: 30px;}
+.title-a{text-decoration: none;color: white;margin-right: 10px;}
+#home-title-top a span{margin:0 5px;}
+#home-title img{height: 40px;margin: 30px 0 30px 30px;}
+#home-list-box{width: 100%;height: 45px;margin-bottom: 10px;}
+#home-list{list-style: none;width: 100%;height: 100%;padding: 0;}
+#home-list li{color:black;width: 14.28%;height: 100%;float: left;text-align: center ;line-height: 45px;box-sizing: border-box;border-right: 1px solid #ccc;transition: all 0.2s ease-out;box-shadow: 1px 2px 4px #ccc;}
+#home-list li:hover{color: white;background: black;}
+/*home - title*/
+.item{width: 100%;}
+.carousel-indicators{bottom: 10px;}
+/*轮播*/
+#home-content{margin-top: 10px;margin-bottom: 15px;}
+#home-goods{margin-top: 5px;}
+#home-goods h2{border-bottom: 1px solid black;padding: 10px 0;}
+.home-goods-c{box-sizing: border-box;border: 15px solid black;height: 300px;width: 49%;float: left;margin: 0.5% 0.5% 0 0.5%;}
+.goods-logo{width: 120px;height: 120px;float: left;margin-left: 15px;}
+.goods-l{height: 100%;float: left;display: inline-block;}
+.goods-img{height: 100%;}
+.goods-r{float: right;width: 35%;padding: 100px 20px 0 0;text-align: center;}
+.goods-r span{font-size: 30px;}
+/*home-content*/
+#footer{width: 100%;height: 160px;background: #ccc;text-align: center;}
+#footer-wrap{display: inline-block;}
+.footer-box{float: left;margin: 20px;}
+.footer-box a{text-decoration: none;color: #000000;}
+.footerTitle{font-size: 15px;margin-bottom: 10px;}
+.fc{font-size: 12px;margin: 3px;}
+#bottom{width: 100%;height: 30px;text-align: center;background: black;color: white;font-size: 12px;line-height: 30px;}
+/*footer*/
+#skate{width: 100%;}
+.container{padding: 0;}
+.row{width:100%;margin: 0;}
+.skate-box{height: 300px;box-sizing: border-box;padding: 10px;text-align: center;}
+.skate-box p{width: 100%;padding:0 20px;}
+.skate-img{height:70%;text-align: center;overflow: hidden;padding-bottom: 10px;}
+.skate-img img{height:100%}
+/*skate*/

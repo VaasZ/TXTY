@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app="login">
+	<head>
+		<meta charset="UTF-8">
+		<title>登录</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+		<link rel="stylesheet" type="text/css" href="css/login.css"/>
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-cookies.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+	<body>
+		<div id="login" ng-controller="loginCtrl">
+			<div id="login-wrap">
+				<div id="login-box" class="clear">
+					<img src="img/title.png"/>
+					<form action="" method="post" id="form">
+						<input type="text" name="username" id="username" placeholder="请输入用户名~" ng-blur="checkUserName()" ng-model="username"/><span ng-if="!result1">*请输入用户名</span><br />
+						<input type="password" name="userpwd" id="userpwd" placeholder="请输入密码~" ng-blur="checkUserPwd()" ng-model="userpwd"/><span ng-if="!result2">*请输入密码</span><br />
+						<a href="http://127.0.0.1/%E5%A4%A9%E9%80%89%E4%BD%93%E8%82%B2/register.html"><div class="login-btn" id="login-btn-r">注册</div></a>
+						<div class="login-btn" id="login-btn-l" ng-click="submitUser()">登录</div><br />
+						<input type="checkbox" id="rememberPwd" ng-model="check"/><label>记住我(七日免登陆)</label><br />
+						
+					</form>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<script src="js/login.js" type="text/javascript" charset="utf-8"></script>

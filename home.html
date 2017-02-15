@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html ng-app="home">
+
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>天选运动</title>
+		<link rel="stylesheet" type="text/css" href="css/reset.css" />
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+		<link rel="stylesheet" type="text/css" href="css/home.css" />
+		<script src="js/angular.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-route.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/angular-cookies.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="home" ng-controller="homeCtrl">
+			<div id="home-wrap">
+				<div id="home-title">
+					<div id="home-title-top">
+						<a href="http://127.0.0.1/%E5%A4%A9%E9%80%89%E4%BD%93%E8%82%B2/login.html" class="title-a" ng-if="result1">登录<span class="glyphicon glyphicon-user"></span></a>
+						<a href="http://127.0.0.1/%E5%A4%A9%E9%80%89%E4%BD%93%E8%82%B2/register.html" class="title-a" ng-if="result1">注册<span class="glyphicon glyphicon glyphicon-pencil"></span></a>
+						<div id="userinfo" ng-if="!result1" class="btn-group">
+							<button type="button" class="btn btn-default dropdown-toggle btn-xs" data-toggle="dropdown" ng-bind="userInfo"><span class="caret"></span></button>
+							<ul class="dropdown-menu" role="menu">
+								<li>
+									<a href="http://127.0.0.1/%E5%A4%A9%E9%80%89%E4%BD%93%E8%82%B2/resetPwd.html">修改密码</a>
+								</li>
+								<li>
+									<a href="#">购物车<span class="glyphicon glyphicon-shopping-cart"></span></a>
+								</li>
+								<li class="divider"></li>
+								<li ng-click="removeUser()">
+									<a href="#">注销</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<a href=""><img src="img/title.png" /></a>
+				</div>
+				<div id="home-list-box">
+					<ul id="home-list" class="clear">
+						<a href="http://127.0.0.1/%E5%A4%A9%E9%80%89%E4%BD%93%E8%82%B2/home.html">
+							<li>网站首页</li>
+						</a>
+						<a href="#/skate">
+							<li>滑板器材</li>
+						</a>
+						<a href="#/shose">
+							<li>时尚鞋品</li>
+						</a>
+						<a href="#/clothes">
+							<li>服饰饰品</li>
+						</a>
+						<a href="#/new">
+							<li>新品上市</li>
+						</a>
+						<a href="">
+							<li>潮流资讯</li>
+						</a>
+						<a href="">
+							<li style="border: none;">品牌</li>
+						</a>
+					</ul>
+				</div>
+				<!--list-->
+				<div id="home-content">
+					<div id="myCarousel" class="carousel slide">
+						<!-- 轮播（Carousel）指标 -->
+						<ol class="carousel-indicators">
+							<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+							<li data-target="#myCarousel" data-slide-to="1"></li>
+							<li data-target="#myCarousel" data-slide-to="2"></li>
+							<li data-target="#myCarousel" data-slide-to="3"></li>
+						</ol>
+						<!-- 轮播（Carousel）项目 -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img src="img/home-slide2.jpg" />
+							</div>
+
+							<div class="item">
+								<img src="img/home-slide3.jpg" />
+							</div>
+							<div class="item">
+								<img src="img/home-slide4.jpg" />
+							</div>
+							<div class="item">
+								<img src="img/home-slide5.jpg" />
+							</div>
+						</div>
+						<!-- 轮播（Carousel）导航 -->
+						<a class="carousel-control left" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span>
+						</a>
+						<a class="carousel-control right" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span>
+						</a>
+					</div>
+					<!--轮播-->
+					<ng-view></ng-view>
+				</div>
+				<!--content-->
+				<div id="footer">
+					<div id="footer-wrap" class="clear">
+						<ul class="footer-box">
+							<li class="footerTitle">新手上路</li>
+							<a href="">
+								<li class="fc">购物指南</li>
+							</a>
+							<a href="">
+								<li class="fc">常见问题</li>
+							</a>
+						</ul>
+						<ul class="footer-box">
+							<li class="footerTitle">支付方式</li>
+							<a href="">
+								<li class="fc">支付宝</li>
+							</a>
+							<a href="">
+								<li class="fc">快钱</li>
+							</a>
+							<a href="">
+								<li class="fc">银联</li>
+							</a>
+						</ul>
+						<ul class="footer-box">
+							<li class="footerTitle">售后服务</li>
+							<a href="">
+								<li class="fc">退货受理</li>
+							</a>
+							<a href="">
+								<li class="fc">退换货政策</li>
+							</a>
+							<a href="">
+								<li class="fc">操作方式</li>
+							</a>
+						</ul>
+						<div class="footer-box">
+							<p class="footerTitle">关注我们</p>
+							<img src="img/qq.png" />
+							<img src="img/wechat.png" />
+							<img src="img/weibo.png" />
+						</div>
+					</div>
+				</div>
+				<div id="bottom">copyright© All Rights Reserved.</div>
+			</div>
+		</div>
+	</body>
+
+</html>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="js/bootstrap.js" type="text/javascript" charset="utf-8"></script>
+<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
